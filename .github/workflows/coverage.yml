@@ -21,6 +21,9 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
+      - name: Check Code Format
+        run: dotnet format --verify-no-changes --verbosity diagnostic
+
       - name: Run Tests with Coverage
         run: dotnet test --configuration Release --collect:"XPlat Code Coverage" --results-directory ./coverage
 
