@@ -36,13 +36,19 @@ jobs:
 
       - name: Update README with Coverage
         run: |
-          # Lấy con số % từ file summary (ví dụ đơn giản bằng grep/sed)
-          COVERAGE=$(grep -oP 'Line coverage: \K[0-9.]+' coveragereport/Summary.markdown | head -1)
-          echo "Curent coverage is $COVERAGE%"
+          REPORT_PATH="coveragereport/Summary.md"
 
-          # Dùng sed để thay thế link badge cũ trong README bằng con số mới
-          # Giả sử trong README bạn có 1 dòng: ![Coverage](...)
-          sed -i "s|!\[Coverage\].*|![Coverage](https://img.shields.io/badge/Progress-${COVERAGE}%25-brightgreen)|g" README.md
+          if [ -f "$REPORT_PATH" ]; then
+            COVERAGE=$(grep -oP 'Line coverage: \K[0-9.]+' "$REPORT_PATH" | head -1)
+            echo "Current coverage is $COVERAGE%"
+            
+            if [ -z "$COVERAGE" ]; then COVERAGE="0"; fi
+
+            sed -i "s|!\[Coverage\].*|![Coverage](https://img.shields.io/badge/Progress-${COVERAGE}%25-brightgreen)|g" README.md
+          else
+            echo "Error: Report file not found at $REPORT_PATH"
+            exit 1
+          fi
 
       - name: Commit & Push changes
         run: |
