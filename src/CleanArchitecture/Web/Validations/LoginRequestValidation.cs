@@ -19,6 +19,6 @@ public class LoginRequestValidation : AbstractValidator<LoginRequest>
             .Matches("[^a-zA-Z0-9]").WithMessage("Password must contain at least one special character.");
 
         RuleFor(x => x.RememberMe)
-            .Must(x => x == true || x == false).WithMessage("RememberMe must be a valid boolean value.");
+            .Must(x => x || !x).WithMessage("RememberMe must be a valid boolean value.");
     }
 }
