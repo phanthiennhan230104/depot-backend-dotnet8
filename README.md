@@ -1,5 +1,9 @@
 # Clean Architecture Training Documentation
 
+# Project Thực Tập - .NET 8 Clean Architecture
+
+**Tiến độ hoàn thành bài tập:** ![Coverage](https://img.shields.io/badge/Progress-0%25-red)
+
 ## 📚 Tổng quan
 
 Đây là bộ tài liệu training hoàn chỉnh cho dự án Clean Architecture .NET 8, được thiết kế để training nhân sự mới về kiến trúc phần mềm và best practices trong phát triển ứng dụng enterprise.
@@ -14,6 +18,7 @@
 ## 📖 Tài liệu có sẵn
 
 ### 1. [Kiến trúc Clean Architecture](./docs/ARCHITECTURE.md)
+
 - Tổng quan về Clean Architecture principles
 - Cấu trúc layers và dependency flow
 - Design patterns được sử dụng
@@ -21,6 +26,7 @@
 - Performance considerations
 
 ### 2. [API Documentation](./docs/API_DOCUMENTATION.md)
+
 - RESTful API endpoints chi tiết
 - Request/Response formats
 - Authentication & Authorization
@@ -28,6 +34,7 @@
 - Example usage với cURL và JavaScript
 
 ### 3. [Hướng dẫn Setup](./docs/SETUP_GUIDE.md)
+
 - Yêu cầu hệ thống
 - Cài đặt từng bước
 - Cấu hình database và JWT
@@ -35,6 +42,7 @@
 - Troubleshooting common issues
 
 ### 4. [Hướng dẫn Testing](./docs/TESTING_GUIDE.md)
+
 - Unit testing với xUnit và Moq
 - Integration testing
 - Code coverage
@@ -42,6 +50,7 @@
 - CI/CD integration
 
 ### 5. [Curriculum Training](./docs/TRAINING_CURRICULUM.md)
+
 - 8 tuần training program
 - Từ cơ bản đến nâng cao
 - Thực hành hands-on
@@ -51,17 +60,20 @@
 ## 🚀 Bắt đầu nhanh
 
 ### 1. Clone Repository
+
 ```bash
 git clone https://github.com/TechSphereX-Edu/CleanArchitecture.git
 cd CleanArchitecture
 ```
 
 ### 2. Chạy với Docker
+
 ```bash
 docker-compose up --build
 ```
 
 ### 3. Truy cập ứng dụng
+
 - **API**: http://localhost:3001
 - **Swagger**: http://localhost:3001/swagger/index.html
 - **Health Check**: http://localhost:3001/health
@@ -84,6 +96,7 @@ clean-architecture/
 ## 🛠️ Công nghệ sử dụng
 
 ### **Backend**
+
 - **.NET 8** - Framework chính
 - **ASP.NET Core** - Web API framework
 - **Entity Framework Core** - ORM
@@ -92,17 +105,20 @@ clean-architecture/
 - **FluentValidation** - Input validation
 
 ### **Testing**
+
 - **xUnit** - Testing framework
 - **Moq** - Mocking library
 - **AutoFixture** - Test data generation
 - **Coverlet** - Code coverage
 
 ### **DevOps**
+
 - **Docker** - Containerization
 - **Docker Compose** - Multi-container orchestration
 - **GitHub Actions** - CI/CD pipeline
 
 ### **Security**
+
 - **JWT Bearer** - Authentication
 - **ASP.NET Core Identity** - User management
 - **BCrypt** - Password hashing
@@ -111,24 +127,28 @@ clean-architecture/
 ## 📊 Tính năng chính
 
 ### **Authentication & Authorization**
+
 - User registration và login
 - JWT token management
 - Role-based access control
 - Password reset functionality
 
 ### **User Management**
+
 - User profile management
 - Avatar upload
 - Password change
 - Account status management
 
 ### **Book Management**
+
 - CRUD operations
 - Search và pagination
 - File upload support
 - Media management
 
 ### **API Features**
+
 - RESTful API design
 - Swagger/OpenAPI documentation
 - Global exception handling
@@ -136,6 +156,7 @@ clean-architecture/
 - Performance monitoring
 
 ### **Testing**
+
 - Unit tests cho business logic
 - Integration tests cho API endpoints
 - Code coverage reporting
@@ -144,21 +165,25 @@ clean-architecture/
 ## 🎓 Training Path
 
 ### **Tuần 1-2: Foundation**
+
 - .NET 8 fundamentals
 - Clean Architecture principles
 - Project setup và configuration
 
 ### **Tuần 3-4: Implementation**
+
 - Domain và Application layer
 - Data access layer
 - Business logic implementation
 
 ### **Tuần 5-6: Testing**
+
 - Unit testing strategies
 - Integration testing
 - Code coverage và quality
 
 ### **Tuần 7-8: Production**
+
 - Security implementation
 - Docker containerization
 - CI/CD pipeline
@@ -169,6 +194,7 @@ clean-architecture/
 Sau khi hoàn thành training, học viên sẽ có thể:
 
 ### **Technical Skills**
+
 - [ ] Implement Clean Architecture từ đầu
 - [ ] Viết comprehensive tests
 - [ ] Sử dụng Docker cho containerization
@@ -176,6 +202,7 @@ Sau khi hoàn thành training, học viên sẽ có thể:
 - [ ] Debug và troubleshoot applications
 
 ### **Soft Skills**
+
 - [ ] Code review và feedback
 - [ ] Documentation writing
 - [ ] Team collaboration
@@ -185,12 +212,14 @@ Sau khi hoàn thành training, học viên sẽ có thể:
 ## 🔧 Development Tools
 
 ### **Required**
+
 - .NET 8.0 SDK
 - Docker Desktop
 - Visual Studio 2022 hoặc VS Code
 - Git
 
 ### **Recommended**
+
 - Postman hoặc Thunder Client
 - SQL Server Management Studio
 - GitHub Desktop
@@ -199,16 +228,19 @@ Sau khi hoàn thành training, học viên sẽ có thể:
 ## 📚 Additional Resources
 
 ### **Books**
+
 - "Clean Architecture" by Robert C. Martin
 - "Clean Code" by Robert C. Martin
 - "Pro ASP.NET Core" by Adam Freeman
 
 ### **Online Courses**
+
 - Microsoft Learn .NET
 - Pluralsight .NET courses
 - Udemy Clean Architecture courses
 
 ### **Communities**
+
 - .NET Community
 - Clean Architecture Facebook Group
 - Stack Overflow
@@ -217,6 +249,7 @@ Sau khi hoàn thành training, học viên sẽ có thể:
 ## 🤝 Contributing
 
 ### **How to Contribute**
+
 1. Fork repository
 2. Tạo feature branch
 3. Commit changes
@@ -224,6 +257,7 @@ Sau khi hoàn thành training, học viên sẽ có thể:
 5. Tạo Pull Request
 
 ### **Code Standards**
+
 - Follow C# coding conventions
 - Write comprehensive tests
 - Update documentation
@@ -232,11 +266,13 @@ Sau khi hoàn thành training, học viên sẽ có thể:
 ## 📞 Support
 
 ### **Training Support**
+
 - **Email**: support@techspherex.com
 - **Slack**: #clean-architecture-training
 - **Office Hours**: 2-4 PM mỗi ngày
 
 ### **Technical Support**
+
 - **GitHub Issues**: Tạo issue trên repository
 - **Documentation**: Kiểm tra docs/ folder
 - **FAQ**: Xem troubleshooting guide
