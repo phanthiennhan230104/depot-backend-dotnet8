@@ -2,7 +2,7 @@
 
 # Project Thực Tập - .NET 8 Clean Architecture
 
-**Tiến độ hoàn thành bài tập:** ![Coverage](https://img.shields.io/badge/Progress-%25-brightgreen)
+**Tiến độ hoàn thành bài tập:** ![Coverage](https://img.shields.io/badge/Progress-0%25-brightgreen)
 
 ## 📚 Tổng quan
 
