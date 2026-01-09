@@ -36,6 +36,9 @@ public static class ConfigureServices
         services.AddSingleton<PerformanceMiddleware>();
         services.AddSingleton<Stopwatch>();
 
+        //new test
+        services.AddValidatorsFromAssemblyContaining<CreateCategoryValidator>();
+
         // Extension classes
         services.AddHealthChecks();
         services.AddCompressionCustom();
