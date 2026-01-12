@@ -18,7 +18,7 @@ public class FileStorageController(IFileService fileStorageService) : BaseContro
     [HttpPost("upload")]
     [SwaggerResponse(200, "File uploaded successfully.", typeof(FileUploadResult))]
     [SwaggerResponse(400, "Invalid file format.")]
-    public async Task<IActionResult> UploadFile(IFormFile file) 
+    public async Task<IActionResult> UploadFile(IFormFile file)
         => Ok(await _fileStorageService.AddFileAsync(file));
 
     /// <summary>

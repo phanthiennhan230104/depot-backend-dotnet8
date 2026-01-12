@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
-using CleanArchitecture.Shared.Models;
 using CleanArchitecture.Infrastructure.Data;
 using CleanArchitecture.Infrastructure.Interface;
+using CleanArchitecture.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Application.Repositories;

@@ -67,14 +67,24 @@ public static class SwaggerExtension
         app.UseSwagger(c =>
         {
             c.RouteTemplate = "swagger/{documentName}/swagger.json";
-            c.PreSerializeFilters.Add((swaggerDoc, httpReq)
-                => swaggerDoc.Servers = [new OpenApiServer { Url = appSettings.AppUrl }]);
+
+            c.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+            {
+                swaggerDoc.Servers =
+                [
+                    new OpenApiServer
+                {
+                    Url = $"{httpReq.Scheme}://{httpReq.Host.Value}"
+                }
+                ];
+            });
         });
 
         app.UseSwaggerUI(setupAction =>
         {
-            setupAction.SwaggerEndpoint("v1/swagger.json", "CleanArchitecture.api v1");
+            setupAction.SwaggerEndpoint("/swagger/v1/swagger.json", "CleanArchitecture.api v1");
             setupAction.RoutePrefix = "swagger";
         });
     }
+
 }
