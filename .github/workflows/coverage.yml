@@ -2,9 +2,13 @@ name: Progress Tracking
 
 on:
   push:
-    branches: ["*"]
+    branches:
+      - main
+      - develop
+      - feature/**
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -55,6 +59,7 @@ jobs:
           fi
 
       - name: Commit & Push changes
+        if: github.event_name == 'push'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "github-actions[bot]"
