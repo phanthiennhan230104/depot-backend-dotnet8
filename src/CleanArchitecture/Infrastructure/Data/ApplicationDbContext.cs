@@ -11,6 +11,8 @@ public class ApplicationDbContext : DbContext
     {
     }
     public DbSet<Depot> Depots { get; set; }
+    
+    public DbSet<Block> Blocks { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

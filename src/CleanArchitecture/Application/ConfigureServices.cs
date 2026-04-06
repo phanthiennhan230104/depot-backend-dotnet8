@@ -11,6 +11,8 @@ public static class ConfigureServices
     public static IServiceCollection AddApplicationService(this IServiceCollection services, AppSettings appsettings)
     {
         services.AddScoped<IDepotService, DepotService>();
+        
+        services.AddScoped<IBlockService, BlockService>();
 
         services.AddTransient<ICurrentTime, CurrentTime>();
 
