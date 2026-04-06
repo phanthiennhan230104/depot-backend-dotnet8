@@ -50,6 +50,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Application\Repositories\" />
     <Folder Include="Domain\Entities\" />
+    <Folder Include="Infrastructure\Interface\" />
   </ItemGroup>
 </Project>

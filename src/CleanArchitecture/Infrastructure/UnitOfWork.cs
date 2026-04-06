@@ -1,8 +1,6 @@
 using CleanArchitecture.Application;
 using CleanArchitecture.Application.Common.Exceptions;
-using CleanArchitecture.Application.Repositories;
 using CleanArchitecture.Infrastructure.Data;
-using CleanArchitecture.Infrastructure.Interface;
 
 namespace CleanArchitecture.Infrastructure;
 
@@ -10,20 +8,9 @@ public class UnitOfWork : IUnitOfWork
 {
     private readonly ApplicationDbContext _context;
 
-    public IUserRepository UserRepository { get; }
-    public IBookRepository BookRepository { get; }
-    public IRefreshTokenRepository RefreshTokenRepository { get; }
-    public IMediaRepository MediaRepository { get; }
-    public IForgotPasswordRepository ForgotPasswordRepository { get; }
-
     public UnitOfWork(ApplicationDbContext dbContext)
     {
         _context = dbContext;
-        UserRepository = new UserRepository(_context);
-        BookRepository = new BookRepository(_context);
-        RefreshTokenRepository = new RefreshTokenRepository(_context);
-        MediaRepository = new MediaRepository(_context);
-        ForgotPasswordRepository = new ForgotPasswordRepository(_context);
     }
     public async Task SaveChangesAsync(CancellationToken token)
         => await _context.SaveChangesAsync(token);
