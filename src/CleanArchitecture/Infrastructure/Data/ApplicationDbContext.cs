@@ -1,4 +1,5 @@
 using System.Reflection;
+using CleanArchitecture.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Infrastructure.Data;
@@ -9,6 +10,7 @@ public class ApplicationDbContext : DbContext
         : base(options)
     {
     }
+    public DbSet<Depot> Depots { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

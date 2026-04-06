@@ -16,4 +16,17 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\Requests\Yards\Bays\" />
+    <Folder Include="Models\Requests\Yards\Blocks\" />
+    <Folder Include="Models\Requests\Yards\Positions\" />
+    <Folder Include="Models\Requests\Yards\Rows\" />
+    <Folder Include="Models\Requests\Yards\Tiers\" />
+    <Folder Include="Models\Responses\Yards\Bays\" />
+    <Folder Include="Models\Responses\Yards\Blocks\" />
+    <Folder Include="Models\Responses\Yards\Positions\" />
+    <Folder Include="Models\Responses\Yards\Rows\" />
+    <Folder Include="Models\Responses\Yards\Tiers\" />
+  </ItemGroup>
+
 </Project>

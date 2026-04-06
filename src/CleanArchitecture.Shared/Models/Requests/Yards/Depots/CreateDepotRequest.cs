@@ -1,10 +1,8 @@
-namespace CleanArchitecture.Domain.Entities;
+namespace CleanArchitecture.Shared.Models.Requests.Yards.Depots;
 
-public class Depot
+public class CreateDepotRequest
 {
-    public Guid Id { get; set; }
     public string Code { get; set; } = default!;
     public string Name { get; set; } = default!;
     public string? Address { get; set; }
-    public bool IsActive { get; set; } = true;
 }
