@@ -50,8 +50,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Application\Common\Mappings\" />
     <Folder Include="Application\Repositories\" />
-    <Folder Include="Domain\Entities\" />
+    <Folder Include="Infrastructure\Data\Configurations\" />
     <Folder Include="Infrastructure\Interface\" />
+    <Folder Include="Web\Services\" />
+    <Folder Include="Web\Validations\" />
   </ItemGroup>
 </Project>

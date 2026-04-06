@@ -6,8 +6,6 @@ using CleanArchitecture.Application.Common;
 using CleanArchitecture.Domain.Authorization;
 using CleanArchitecture.Web.Extensions;
 using CleanArchitecture.Web.Middlewares;
-using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 
 namespace CleanArchitecture.Web;
@@ -18,9 +16,6 @@ public static class ConfigureServices
     {
         services.AddEndpointsApiExplorer();
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-        services.AddFluentValidationAutoValidation();
-        services.AddFluentValidationClientsideAdapters();
         services.SetupMvc();
         if (appSettings.Identity.IsLocal)
         {
@@ -37,7 +32,6 @@ public static class ConfigureServices
         services.AddSingleton<Stopwatch>();
 
         //new test
-        services.AddValidatorsFromAssemblyContaining<CreateCategoryValidator>();
 
         // Extension classes
         services.AddHealthChecks();
