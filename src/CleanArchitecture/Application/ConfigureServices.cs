@@ -14,6 +14,8 @@ public static class ConfigureServices
         
         services.AddScoped<IBlockService, BlockService>();
 
+        services.AddScoped<IPositionService, PositionService>();
+
         services.AddTransient<ICurrentTime, CurrentTime>();
 
         return services;

@@ -25,7 +25,6 @@ public class BlockService : IBlockService
                 DepotId = x.DepotId,
                 Code = x.Code,
                 Name = x.Name,
-                Description = x.Description,
                 IsVirtual = x.IsVirtual,
                 IsActive = x.IsActive
             })
@@ -42,7 +41,6 @@ public class BlockService : IBlockService
                 DepotId = x.DepotId,
                 Code = x.Code,
                 Name = x.Name,
-                Description = x.Description,
                 IsVirtual = x.IsVirtual,
                 IsActive = x.IsActive
             })
@@ -67,7 +65,6 @@ public class BlockService : IBlockService
             DepotId = request.DepotId,
             Code = request.Code,
             Name = request.Name,
-            Description = request.Description,
             IsVirtual = request.IsVirtual,
             IsActive = true
         };
@@ -81,7 +78,6 @@ public class BlockService : IBlockService
             DepotId = entity.DepotId,
             Code = entity.Code,
             Name = entity.Name,
-            Description = entity.Description,
             IsVirtual = entity.IsVirtual,
             IsActive = entity.IsActive
         };
@@ -102,7 +98,6 @@ public class BlockService : IBlockService
 
         entity.Code = request.Code;
         entity.Name = request.Name;
-        entity.Description = request.Description;
         entity.IsVirtual = request.IsVirtual;
         entity.IsActive = request.IsActive;
 
@@ -114,7 +109,6 @@ public class BlockService : IBlockService
             DepotId = entity.DepotId,
             Code = entity.Code,
             Name = entity.Name,
-            Description = entity.Description,
             IsVirtual = entity.IsVirtual,
             IsActive = entity.IsActive
         };

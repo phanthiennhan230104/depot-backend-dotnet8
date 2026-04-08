@@ -20,9 +20,6 @@ public class BlockConfiguration : IEntityTypeConfiguration<Block>
             .HasMaxLength(100)
             .IsRequired();
 
-        builder.Property(x => x.Description)
-            .HasMaxLength(255);
-
         builder.Property(x => x.IsVirtual)
             .IsRequired();
 

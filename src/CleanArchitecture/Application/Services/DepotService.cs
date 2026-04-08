@@ -57,7 +57,7 @@ public class DepotService : IDepotService
             Id = Guid.NewGuid(),
             Code = request.Code.Trim(),
             Name = request.Name.Trim(),
-            Address = request.Address?.Trim(),
+            Address = request.Address.Trim(),
             IsActive = true
         };
 
@@ -85,7 +85,7 @@ public class DepotService : IDepotService
 
         entity.Code = request.Code.Trim();
         entity.Name = request.Name.Trim();
-        entity.Address = request.Address?.Trim();
+        entity.Address = request.Address.Trim();
         entity.IsActive = request.IsActive;
 
         await _context.SaveChangesAsync();

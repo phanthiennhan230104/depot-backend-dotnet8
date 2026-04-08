@@ -54,6 +54,5 @@
     <Folder Include="Application\Repositories\" />
     <Folder Include="Infrastructure\Interface\" />
     <Folder Include="Web\Services\" />
-    <Folder Include="Web\Validations\" />
   </ItemGroup>
 </Project>
