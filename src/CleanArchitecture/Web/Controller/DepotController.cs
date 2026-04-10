@@ -36,4 +36,22 @@ public class DepotController : ControllerBase
         var result = await _depotService.CreateAsync(request);
         return Ok(new { data = result });
     }
+    
+    [HttpPut("{id:guid}")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdateDepotRequest request)
+    {
+        var result = await _depotService.UpdateAsync(id, request);
+        if (result == null) return NotFound();
+
+        return Ok(new { data = result });
+    }
+    
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var deleted = await _depotService.DeleteAsync(id);
+        if (!deleted) return NotFound();
+
+        return Ok(new { message = "Depot deleted successfully." });
+    }
 }

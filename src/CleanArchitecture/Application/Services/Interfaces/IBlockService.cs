@@ -9,4 +9,6 @@ public interface IBlockService
     Task<BlockResponse?> GetByIdAsync(Guid id);
     Task<BlockResponse> CreateAsync(CreateBlockRequest request);
     Task<BlockResponse?> UpdateAsync(Guid id, UpdateBlockRequest request);
+    Task<bool> DeleteAsync(Guid id);
+
 }

@@ -113,4 +113,17 @@ public class BlockService : IBlockService
             IsActive = entity.IsActive
         };
     }
+    public async Task<bool> DeleteAsync(Guid id)
+    {
+        var entity = await _context.Blocks.FirstOrDefaultAsync(x => x.Id == id);
+        if (entity == null) return false;
+
+        var hasPositions = await _context.Positions.AnyAsync(x => x.BlockId == id);
+        if (hasPositions)
+            throw new Exception("Cannot delete block because it still has positions.");
+
+        _context.Blocks.Remove(entity);
+        await _context.SaveChangesAsync();
+        return true;
+    }
 }

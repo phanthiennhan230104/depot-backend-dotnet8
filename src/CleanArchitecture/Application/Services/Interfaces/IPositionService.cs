@@ -9,4 +9,5 @@ public interface IPositionService
     Task<PositionResponse?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
     Task<PositionResponse> CreateAsync(CreatePositionRequest request, CancellationToken cancellationToken = default);
     Task<PositionResponse?> UpdateAsync(Guid id, UpdatePositionRequest request, CancellationToken cancellationToken = default);
+    Task<bool> DeleteAsync(Guid id, CancellationToken cancellationToken = default);
 }

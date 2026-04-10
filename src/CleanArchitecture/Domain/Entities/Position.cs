@@ -12,5 +12,5 @@ public class Position
     public int? TierNo { get; set; }
 
     public string PositionCode { get; set; } = default!;
-    public bool IsActive { get; set; }
+    public bool IsActive { get; set; } = true;
 }

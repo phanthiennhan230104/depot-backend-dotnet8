@@ -27,6 +27,6 @@ public class PositionConfiguration : IEntityTypeConfiguration<Position>
         builder.HasIndex(x => x.PositionCode)
             .IsUnique();
 
-        builder.HasIndex(x => new { x.BlockId, x.BayNo, x.RowNo, x.TierNo });
+        // builder.HasIndex(x => new { x.BlockId, x.BayNo, x.RowNo, x.TierNo });
     }
 }

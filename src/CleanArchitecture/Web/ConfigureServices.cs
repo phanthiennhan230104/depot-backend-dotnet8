@@ -30,7 +30,8 @@ public static class ConfigureServices
         services.AddSingleton<GlobalExceptionMiddleware>();
         services.AddSingleton<PerformanceMiddleware>();
         services.AddSingleton<Stopwatch>();
-
+        
+        
         //new test
 
         // Extension classes

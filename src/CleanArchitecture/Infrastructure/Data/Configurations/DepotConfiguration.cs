@@ -18,9 +18,10 @@ public class DepotConfiguration : IEntityTypeConfiguration<Depot>
 
         builder.Property(x => x.Name)
             .IsRequired()
-            .HasMaxLength(255);
+            .HasMaxLength(100);
 
         builder.Property(x => x.Address)
+            .IsRequired()
             .HasMaxLength(255);
 
         builder.Property(x => x.IsActive)

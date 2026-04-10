@@ -105,6 +105,10 @@ public class DepotService : IDepotService
         var entity = await _context.Depots.FirstOrDefaultAsync(x => x.Id == id);
         if (entity == null) return false;
 
+        var hasBlocks = await _context.Blocks.AnyAsync(x => x.DepotId == id);
+        if (hasBlocks)
+            throw new Exception("Cannot delete depot because it still has blocks.");
+
         _context.Depots.Remove(entity);
         await _context.SaveChangesAsync();
         return true;

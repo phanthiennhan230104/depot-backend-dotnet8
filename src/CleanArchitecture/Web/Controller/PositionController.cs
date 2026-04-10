@@ -51,7 +51,20 @@ public class PositionController : ControllerBase
         {
             return NotFound();
         }
-
+        
         return Ok(result);
+    }
+    
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Delete(Guid id, CancellationToken cancellationToken)
+    {
+        var deleted = await _positionService.DeleteAsync(id, cancellationToken);
+
+        if (!deleted)
+        {
+            return NotFound();
+        }
+
+        return Ok(new { message = "Position deleted successfully." });
     }
 }

@@ -164,4 +164,19 @@ public class PositionService : IPositionService
             IsActive = entity.IsActive
         };
     }
+
+    public async Task<bool> DeleteAsync(Guid id, CancellationToken cancellationToken = default)
+    {
+        var entity = await _context.Positions
+            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
+
+        if (entity is null)
+        {
+            return false;
+        }
+
+        _context.Positions.Remove(entity);
+        await _context.SaveChangesAsync(cancellationToken);
+        return true;
+    }
 }

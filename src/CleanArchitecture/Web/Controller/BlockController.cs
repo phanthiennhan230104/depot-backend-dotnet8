@@ -44,4 +44,13 @@ public class BlockController : ControllerBase
         if (result == null) return NotFound();
         return Ok(result);
     }
+    
+    [HttpDelete("{id:guid}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var deleted = await _blockService.DeleteAsync(id);
+        if (!deleted) return NotFound();
+
+        return Ok(new { message = "Block deleted successfully." });
+    }
 }
